@@ -1,0 +1,202 @@
+/* style.css - Round and Modern Refresh */
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Modern sans-serif stack */
+    background-color: #f0f2f5; /* Lighter, common modern background */
+    color: #1c1e21; /* Dark grey for main text, good contrast */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff; /* Clean white container */
+    padding: 30px 40px; /* Increased padding */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer, more modern shadow */
+    width: 90%;
+    max-width: 750px; /* Slightly wider for better layout */
+    text-align: center;
+}
+
+h1 {
+    color: #007bff; /* A common modern primary blue, or keep your teal: #2a9d8f */
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+h2 { /* For the "Problem from: ..." title or "Random Problem" */
+    color: #4b5563; /* Medium dark grey for subtitles */
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+#quiz-area {
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: #f8f9fa; /* Very light grey, subtle distinction */
+    border-radius: 10px;
+    border: 1px solid #dee2e6; /* Light border */
+}
+
+#problem-text {
+    font-size: 1.25em; /* Slightly larger for readability */
+    margin-bottom: 20px;
+    min-height: 45px;
+    line-height: 1.6;
+    color: #343a40; /* Darker grey for problem text */
+}
+
+#answer-input {
+    width: calc(100% - 28px);
+    padding: 14px; /* More padding */
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.05em;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#answer-input:focus {
+    border-color: #007bff; /* Highlight color on focus, matches h1 if blue */
+    /* Or your teal: #2a9d8f */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus ring, matches h1 if blue */
+    /* Or for teal: rgba(42, 157, 143, 0.25) */
+    outline: none;
+}
+
+/* General Button Styling */
+button {
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Adjusted padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.05em;
+    font-weight: 500; /* Slightly bolder */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin: 8px 5px;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px); /* Subtle hover lift */
+}
+
+button:active {
+    transform: translateY(0px); /* Press down effect */
+}
+
+#submit-btn {
+    background-color: #007bff; /* Primary blue, or your teal: #2a9d8f */
+}
+
+#next-btn {
+    background-color: #6c757d; /* A neutral grey for secondary actions */
+    /* Or your orange: #f4a261 */
+}
+#next-btn:hover {
+     background-color: #5a6268; /* Darker grey on hover */
+     /* Or your darker orange: #e76f51 */
+}
+
+
+#feedback-area {
+    margin-top: 20px;
+    padding: 0 10px; /* Only horizontal padding */
+    border-radius: 8px;
+}
+
+#feedback-text {
+    font-weight: 600; /* Bolder feedback */
+    min-height: 22px;
+    font-size: 1.15em;
+    padding: 8px 0;
+}
+
+.correct {
+    color: #28a745 !important; /* Standard success green */
+    /* Or your teal: #2a9d8f !important */
+}
+
+.incorrect {
+    color: #dc3545 !important; /* Standard danger red */
+    /* Or your orangey-red: #e76f51 !important */
+}
+
+/* --- Khan Academy Inspired Explanation Box --- */
+#explanation-box {
+    margin-top: 20px;
+    padding: 20px 25px; /* Generous padding */
+    background-color: #e9ecef; /* Light grey, distinct from quiz area */
+    border: 1px solid #ced4da; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Very subtle shadow */
+}
+
+#explanation-box h4 {
+    margin-top: 0;
+    margin-bottom: 15px; /* More space after heading */
+    color: #343a40; /* Dark, readable heading color */
+    font-size: 1.2em;
+    font-weight: 600;
+    border-bottom: 1px solid #adb5bd; /* Separator line */
+    padding-bottom: 10px;
+}
+
+#explanation-text {
+    line-height: 1.7; /* Increased line height for readability */
+    font-size: 1.05em;
+    color: #212529; /* Slightly darker text for explanation content */
+}
+
+/* Basic styling for tables within explanations, if you use them */
+#explanation-box table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+#explanation-box th, #explanation-box td {
+    border: 1px solid #adb5bd;
+    padding: 10px;
+    text-align: left;
+}
+
+#explanation-box th {
+    background-color: #f8f9fa; /* Lighter header for table */
+    font-weight: 600;
+}
+
+#explanation-box tr:nth-child(even) td {
+    background-color: #f8f9fa; /* Zebra striping for table rows */
+}
+/* --- End Explanation Box --- */
+
+
+#score-display {
+    margin-top: 25px;
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #495057; /* Slightly softer score color */
+}
+
+/* Optional: Style for <sup> for exponents if you choose to use it in HTML explanations */
+#explanation-text sup, #problem-text sup {
+    font-size: 0.75em;
+    vertical-align: super;
+    line-height: 0; /* Prevents affecting line height too much */
+}

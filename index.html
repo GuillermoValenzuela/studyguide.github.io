@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8th Grade Math Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>8th Grade Math Practice</h1>
+
+        <!-- REMOVE TOPIC SELECTOR
+        <div class="topic-selector">
+            <label for="topic">Choose a topic:</label>
+            <select id="topic" name="topic"></select>
+        </div>
+        -->
+
+        <div id="quiz-area">
+            <h2 id="topic-title">Random Problem</h2> <!-- Can be static or show original topic -->
+            <p id="problem-text"></p>
+            <input type="text" id="answer-input" placeholder="Your answer">
+            <button id="submit-btn">Submit</button>
+            <button id="next-btn" style="display:none;">Next Problem</button>
+        </div>
+
+        <div id="feedback-area">
+            <p id="feedback-text"></p>
+            <div id="explanation-box" style="display:none;">
+                <h4>Explanation:</h4>
+                <p id="explanation-text"></p>
+            </div>
+        </div>
+         <p id="score-display">Score: 0/0</p>
+    </div>
+
+    <audio id="correct-sound" src="sounds/correct.mp3"></audio>
+    <audio id="incorrect-sound" src="sounds/incorrect.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
